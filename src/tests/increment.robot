@@ -21,3 +21,11 @@ When counter has a nonzero value and it is reset the value becomes zero
     Click Button    Paina
     Click Button    Nollaa
     Page Should Contain  nappia painettu 0 kertaa
+
+When setting value to 10 the counter is 10
+    Go To  ${HOME_URL}
+    Click Button    Paina
+    Click Button    Paina
+    Input Text    name=amount    10
+    Click Button    aseta
+    Page Should Contain    nappia painettu 10 kertaa
